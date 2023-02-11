@@ -54,9 +54,12 @@ public class TypeEffector : MonoBehaviour
         }
         msgText.text += targetMsg[index];
         index++;
+
         // Sound
-        if (targetMsg[index] != ' ' || targetMsg[index] != '.')
-            audioSource.Play();
+        if (msgText.text.Length != targetMsg.Length) {
+            if (targetMsg[index] != ' ' || targetMsg[index] != '.')
+                audioSource.Play();
+        }
         Invoke("Effecting", interval);
     }
 
