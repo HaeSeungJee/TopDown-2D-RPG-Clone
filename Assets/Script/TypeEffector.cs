@@ -39,7 +39,6 @@ public class TypeEffector : MonoBehaviour
 
         // Start Animation
         interval = 1.0f / CharPerSeconds;
-        Debug.Log(interval);
 
         isAnim = true;
 
